@@ -1,0 +1,267 @@
+import { notFound } from "next/navigation";
+import { getCompany, getSourcedValue } from "@/lib/data";
+import MetricCell from "@/components/metrics/MetricCell";
+import { Lightbulb, Layers, BookOpen, ArrowRight } from "lucide-react";
+import Link from "next/link";
+
+export default function OverviewPage({
+  params,
+}: {
+  params: { ticker: string };
+}) {
+  const company = getCompany(params.ticker);
+  if (!company) notFound();
+
+  const ticker = company.ticker;
+  const isBank = company.isBank;
+
+  // Sourced metrics for overview
+  const revVal = getSourcedValue(ticker, "revenue", "FY2025") || getSourcedValue(ticker, "revenue", "FY2026");
+  const netIncVal = getSourcedValue(ticker, "net_income", "FY2025") || getSourcedValue(ticker, "net_income", "FY2026");
+  const opIncVal = getSourcedValue(ticker, "operating_income", "FY2025") || getSourcedValue(ticker, "operating_income", "FY2026");
+  const fcfVal = getSourcedValue(ticker, "free_cash_flow", "FY2025");
+  const peVal = getSourcedValue(ticker, "pe_ratio");
+  const grossProfitVal = getSourcedValue(ticker, "gross_profit", "FY2025") || getSourcedValue(ticker, "gross_profit", "FY2026");
+  const debtVal = getSourcedValue(ticker, "total_debt", "FY2025") || getSourcedValue(ticker, "total_debt", "FY2026");
+  const cashVal = getSourcedValue(ticker, "cash", "FY2025") || getSourcedValue(ticker, "cash", "FY2026");
+  const sharesVal = getSourcedValue(ticker, "shares_outstanding");
+  const tbvVal = getSourcedValue(ticker, "tbv_per_share", "FY2025");
+  const cet1Val = getSourcedValue(ticker, "cet1_ratio", "FY2025");
+  const rotceVal = getSourcedValue(ticker, "rotce", "FY2025");
+
+  // Signature teaching moment text per company
+  const signatureMoments = {
+    NVDA: {
+      title: "Signature Concept: Non-Operating Investment Gains & Fabless Economics",
+      accentBorder: "border-accent-nvda",
+      accentText: "text-accent-nvda",
+      content:
+        "In H1 FY2027, NVIDIA reported ~$16B of mark-to-market pre-tax investment gains (from holdings including Intel common stock) in 'Other Income Net'. This elevated GAAP net income well above core chip-selling operating income. Furthermore, NVIDIA's tiny $3.4B CapEx against $130B+ revenue illustrates how fabless chip designers capture extreme gross margins (75%) by delegating heavy physical fabrication CapEx to TSMC.",
+    },
+    NFLX: {
+      title: "Signature Concept: The Content Amortization Blind Spot in EBITDA",
+      accentBorder: "border-accent-nflx",
+      accentText: "text-accent-nflx",
+      content:
+        "EBITDA is frequently cited as a proxy for operational cash generation. For Netflix, adding back content amortization inflates EBITDA from ~$13.3B to ~$35.0B. However, streaming content depreciates in viewing value in months — Netflix must continuously spend over $17B cash every year to replace old shows. Content amortization is a real ongoing cash cost, not a non-cash historical sunk cost like machinery depreciation.",
+    },
+    JPM: {
+      title: "Signature Concept: Why Standard EV & EBITDA Break Down for Banks",
+      accentBorder: "border-accent-jpm",
+      accentText: "text-accent-jpm",
+      content:
+        "For non-financial corporations, Enterprise Value = Market Cap + Debt − Cash. Applying this formula to JPMorgan Chase yields an Enterprise Value below its Market Cap ($780B EV vs. $955B Market Cap). This occurs because customer deposits are balance sheet liabilities that represent operational inventory rather than discretionary leverage. Valuation for banks relies strictly on P/E, Price/Tangible Book, ROTCE, and CET1 capital ratios.",
+    },
+  }[ticker];
+
+  return (
+    <div className="space-y-12">
+      {/* 1. Core Financial Ledger */}
+      <section className="space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 border-b border-line pb-2">
+          <h2 className="font-serif text-xl sm:text-2xl font-semibold text-ink">
+            Audited Financial Highlights
+          </h2>
+          <span className="font-mono text-xs text-ink-muted">
+            Click <span className="text-accent font-semibold">ⓘ</span> on any metric for plain-English financial mechanics
+          </span>
+        </div>
+
+        {/* Tier 1: Core Income & Profitability (Large Editorial Ledger) */}
+        <div className="p-6 sm:p-8 bg-paper-raised border border-line rounded-card shadow-xs">
+          <span className="font-mono text-[10px] uppercase tracking-widest text-accent font-bold block mb-4">
+            Income Statement &amp; Earning Power
+          </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <MetricCell
+              label="Annual Net Revenue"
+              metricId="revenue"
+              companyTicker={ticker}
+              sourcedValue={revVal}
+              size="large"
+            />
+            <MetricCell
+              label="GAAP Net Income"
+              metricId="net_income"
+              companyTicker={ticker}
+              sourcedValue={netIncVal}
+              size="large"
+            />
+            {!isBank ? (
+              <>
+                <MetricCell
+                  label="Operating Income (EBIT)"
+                  metricId="operating_income"
+                  companyTicker={ticker}
+                  sourcedValue={opIncVal}
+                  size="large"
+                />
+                <MetricCell
+                  label="Gross Profit"
+                  metricId="gross_profit"
+                  companyTicker={ticker}
+                  sourcedValue={grossProfitVal}
+                  size="large"
+                />
+              </>
+            ) : (
+              <>
+                <MetricCell
+                  label="Return on Tangible Equity"
+                  metricId="rotce"
+                  companyTicker={ticker}
+                  sourcedValue={rotceVal}
+                  size="large"
+                />
+                <MetricCell
+                  label="CET1 Capital Ratio"
+                  metricId="cet1_ratio"
+                  companyTicker={ticker}
+                  sourcedValue={cet1Val}
+                  size="large"
+                />
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* Tier 2: Solvency, Cash Generation & Valuation Multiples */}
+        <div className="p-6 sm:p-8 bg-paper-raised border border-line rounded-card shadow-xs">
+          <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted font-bold block mb-4">
+            Balance Sheet Strength &amp; Valuation
+          </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {!isBank ? (
+              <>
+                <MetricCell
+                  label="Free Cash Flow (FCF)"
+                  metricId="free_cash_flow"
+                  companyTicker={ticker}
+                  sourcedValue={fcfVal}
+                  size="medium"
+                />
+                <MetricCell
+                  label="Total Gross Debt"
+                  metricId="total_debt"
+                  companyTicker={ticker}
+                  sourcedValue={debtVal}
+                  size="medium"
+                />
+                <MetricCell
+                  label="Cash & Equivalents"
+                  metricId="cash"
+                  companyTicker={ticker}
+                  sourcedValue={cashVal}
+                  size="medium"
+                />
+                <MetricCell
+                  label="Trailing P/E Ratio"
+                  metricId="pe_ratio"
+                  companyTicker={ticker}
+                  sourcedValue={peVal}
+                  size="medium"
+                />
+              </>
+            ) : (
+              <>
+                <MetricCell
+                  label="Tangible Book / Share"
+                  metricId="tbv_per_share"
+                  companyTicker={ticker}
+                  sourcedValue={tbvVal}
+                  size="medium"
+                />
+                <MetricCell
+                  label="Price / Tangible Book"
+                  metricId="price_to_book"
+                  companyTicker={ticker}
+                  rawOverrideValue={2.33}
+                  unit="ratio"
+                  periodLabel="Q2 2026"
+                  size="medium"
+                />
+                <MetricCell
+                  label="Trailing P/E Ratio"
+                  metricId="pe_ratio"
+                  companyTicker={ticker}
+                  sourcedValue={peVal}
+                  size="medium"
+                />
+                <MetricCell
+                  label="Diluted Common Shares"
+                  metricId="shares_outstanding"
+                  companyTicker={ticker}
+                  sourcedValue={sharesVal}
+                  size="medium"
+                />
+              </>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Signature Pedagogical Memo */}
+      {signatureMoments && (
+        <section className={`p-6 sm:p-8 bg-paper-raised border-l-4 ${signatureMoments.accentBorder} border border-line rounded-card shadow-xs space-y-3`}>
+          <div className="flex items-center gap-2">
+            <Lightbulb className={`w-5 h-5 ${signatureMoments.accentText}`} />
+            <h3 className="font-serif text-lg sm:text-xl font-semibold text-ink">
+              {signatureMoments.title}
+            </h3>
+          </div>
+          <p className="text-xs sm:text-sm text-ink leading-relaxed font-sans pl-7">
+            {signatureMoments.content}
+          </p>
+        </section>
+      )}
+
+      {/* 3. Deep-Dive Navigation Shortcuts */}
+      <section className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+        <Link
+          href={`/company/${ticker}/business`}
+          className="p-5 bg-paper-raised border border-line rounded-card hover:border-ink hover:shadow-xs transition-all group flex items-start gap-3.5"
+        >
+          <Layers className="w-5 h-5 text-accent shrink-0 mt-0.5 group-hover:scale-105 transition-transform" />
+          <div>
+            <span className="font-serif text-sm font-semibold text-ink block group-hover:text-accent transition-colors">
+              Business Model &amp; Segments
+            </span>
+            <span className="text-xs text-ink-muted leading-relaxed block mt-0.5">
+              Revenue mix breakdown and Form 10-K Item 1A material risks.
+            </span>
+          </div>
+        </Link>
+
+        <Link
+          href={`/company/${ticker}/financials`}
+          className="p-5 bg-paper-raised border border-line rounded-card hover:border-ink hover:shadow-xs transition-all group flex items-start gap-3.5"
+        >
+          <BookOpen className="w-5 h-5 text-accent shrink-0 mt-0.5 group-hover:scale-105 transition-transform" />
+          <div>
+            <span className="font-serif text-sm font-semibold text-ink block group-hover:text-accent transition-colors">
+              Financials &amp; Waterfall Bridge
+            </span>
+            <span className="text-xs text-ink-muted leading-relaxed block mt-0.5">
+              5-year historical trajectory and earnings step-down bridge.
+            </span>
+          </div>
+        </Link>
+
+        <Link
+          href={isBank ? `/company/${ticker}/bank-economics` : `/company/${ticker}/lbo`}
+          className="p-5 bg-paper-raised border border-line rounded-card hover:border-ink hover:shadow-xs transition-all group flex items-start gap-3.5"
+        >
+          <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-0.5 group-hover:translate-x-1 transition-transform" />
+          <div>
+            <span className="font-serif text-sm font-semibold text-ink block group-hover:text-accent transition-colors">
+              {isBank ? "Bank Economics Module" : "Interactive LBO Simulator"}
+            </span>
+            <span className="text-xs text-ink-muted leading-relaxed block mt-0.5">
+              {isBank ? "ROTCE compounding & excess capital distributions." : "Real-time returns engine & value creation waterfall."}
+            </span>
+          </div>
+        </Link>
+      </section>
+    </div>
+  );
+}
