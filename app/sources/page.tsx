@@ -110,7 +110,7 @@ export default function SourcesPage() {
 
     // Peers
     {
-      company: "Peer Comparables Bibliography",
+      company: "Peer comparable companies",
       ticker: "PEERS",
       cik: "MULTIPLE",
       exchange: "US EXCHANGES",
@@ -151,11 +151,11 @@ export default function SourcesPage() {
         <div className="flex items-center gap-2 mb-2">
           <FileText className="w-5 h-5 text-accent" />
           <h1 className="font-serif text-2xl font-semibold text-ink">
-            Master Primary Sources &amp; SEC Filings Directory
+            Primary sources and SEC filings directory
           </h1>
         </div>
         <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
-          Full transparency index. Every financial data point across GROUNDLINE is traceable directly to SEC Form 10-K, 10-Q, and 8-K filings with accession numbers and EDGAR URLs.
+          Every financial figure in GROUNDLINE is traceable to SEC Form 10-K, 10-Q, and 8-K filings, with accession numbers and EDGAR links.
         </p>
       </div>
 

@@ -8,34 +8,34 @@ import CompanyLogo from "@/components/common/CompanyLogo";
 
 const CATEGORY_META: Record<string, { label: string; icon: React.ComponentType<{ className?: string }>; description: string }> = {
   "Income Statement": {
-    label: "Income Statement & Profitability",
+    label: "Income statement and profitability",
     icon: FileSpreadsheet,
-    description: "Core operating performance, top-line scale, gross margins, and bottom-line earnings before and after overhead.",
+    description: "Core operating performance, revenue scale, gross margins, and operating earnings before and after overhead.",
   },
   "Cash Flow": {
-    label: "Cash Flow Dynamics & Capital Intensity",
+    label: "Cash flow and capital intensity",
     icon: TrendingUp,
-    description: "Actual liquidity generation, working capital needs, and reinvestment requirements into physical and digital infrastructure.",
+    description: "Operating cash flow, working capital needs, and reinvestment requirements for physical and digital assets.",
   },
   "Balance Sheet": {
-    label: "Balance Sheet & Capital Structure",
+    label: "Balance sheet and capital structure",
     icon: Scale,
-    description: "Solvency, gross and net leverage, enterprise value bridge, and long-term capital cushion.",
+    description: "Solvency, leverage ratios, debt structure, and the bridge from equity to enterprise value.",
   },
   "Valuation": {
-    label: "Valuation & Market Multiples",
+    label: "Valuation and market multiples",
     icon: LineChart,
-    description: "Market pricing relative to cash flow, earnings, and asset base across comparable market leaders.",
+    description: "Market pricing relative to cash flow, earnings, and asset base across industry peers.",
   },
   "Bank Metrics": {
-    label: "Bank Regulatory Capital & Spread Economics",
+    label: "Bank capital and spread economics",
     icon: Landmark,
-    description: "Specialized financial institution metrics: Net Interest Margin (NIM), CET1 regulatory ratios, and ROTCE.",
+    description: "Specialized financial institution metrics, including Net Interest Margin (NIM), CET1 regulatory ratios, and ROTCE.",
   },
   "LBO Returns": {
-    label: "LBO & Value Creation Economics",
+    label: "LBO and value creation economics",
     icon: Layers,
-    description: "Private equity mechanics: financial leverage, debt paydown, multiple expansion, and IRR / MOIC returns attribution.",
+    description: "Private equity return drivers, including financial leverage, debt paydown, multiple expansion, and IRR / MOIC attribution.",
   },
 };
 
@@ -84,11 +84,11 @@ export default function GlossaryPage() {
         <div className="flex items-center gap-2.5 mb-2">
           <BookOpen className="w-5 h-5 text-accent" />
           <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-ink">
-            Financial Literacy &amp; Concepts Dictionary
+            Financial concepts dictionary
           </h2>
         </div>
         <p className="text-xs sm:text-sm text-ink-muted leading-relaxed max-w-3xl">
-          Every financial metric across GROUNDLINE explained with institutional precision: definitions, investor significance, exact mathematical formulas, and live company numbers.
+          Core financial metrics across GROUNDLINE explained with definitions, investor context, mathematical formulas, and company examples.
         </p>
       </div>
 
@@ -185,7 +185,7 @@ export default function GlossaryPage() {
                       </div>
 
                       <div className="pt-3.5 mt-3.5 border-t border-line/60 flex items-center justify-between text-xs font-mono text-accent">
-                        <span>Explore interactive analysis &amp; disclosures</span>
+                        <span>View analysis and disclosures</span>
                         <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </Link>
@@ -242,7 +242,7 @@ export default function GlossaryPage() {
                 </div>
 
                 <div className="pt-3.5 mt-3.5 border-t border-line/60 flex items-center justify-between text-xs font-mono text-accent">
-                  <span>Explore interactive analysis &amp; disclosures</span>
+                  <span>View analysis and disclosures</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>

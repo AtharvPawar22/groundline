@@ -19,7 +19,7 @@ export default function BankEconomicsPage({
     <div className="space-y-6">
       <div className="pb-3 border-b border-line">
         <h2 className="font-serif text-2xl font-semibold text-ink">
-          {company.name} — Bank Economics & Capital Distribution Module
+          {company.name}: bank economics and capital distribution
         </h2>
         <p className="text-xs text-ink-muted mt-1">
           Explore ROTCE capital generation, Tangible Book Value per share compounding, dividend & share repurchase capacity, and regulatory CET1 capital constraints.

@@ -24,7 +24,7 @@ export default function BusinessPage({
       accentBorder: "border-accent-nvda/30",
       accentBg: "bg-accent-nvda-light",
       accentText: "text-accent-nvda",
-      moatTitle: "The CUDA Moat & Fabless Gross Margin Leverage",
+      moatTitle: "The CUDA moat and fabless economics",
       moatDescription:
         "By packaging silicon, NVLink networking switches, and CUDA software libraries into integrated rack systems (DGX/GB200 NVL72), NVIDIA captures hardware margins exceeding 70% while leaving high capital expenditure risks to contract foundry TSMC.",
     },
@@ -35,7 +35,7 @@ export default function BusinessPage({
       accentBorder: "border-accent-nflx/30",
       accentBg: "bg-accent-nflx-light",
       accentText: "text-accent-nflx",
-      moatTitle: "Global Direct-to-Consumer Distribution & Content Efficiency",
+      moatTitle: "Direct-to-consumer scale and content efficiency",
       moatDescription:
         "Netflix amortizes multi-billion-dollar global production budgets across 300M+ paid memberships worldwide. Unlike linear legacy television, local originals (e.g. Squid Game, Lupin) scale globally at near-zero incremental distribution cost.",
     },
@@ -46,7 +46,7 @@ export default function BusinessPage({
       accentBorder: "border-accent-jpm/30",
       accentBg: "bg-accent-jpm-light",
       accentText: "text-accent-jpm",
-      moatTitle: "The Fortress Balance Sheet & Dual Revenue Dampening",
+      moatTitle: "Balance sheet scale and diversified revenue streams",
       moatDescription:
         "JPMorgan's vast scale ($4.4T assets, $2.4T deposits) generates structural funding cost advantages. Countercyclical revenue streams buffer returns: when interest rate cuts reduce Net Interest Income, investment banking fees and debt/equity underwriting volume expand.",
     },
@@ -63,7 +63,7 @@ export default function BusinessPage({
               <div className="flex items-center gap-2">
                 <DollarSign className="w-5 h-5 text-accent" />
                 <h2 className="font-serif text-xl sm:text-2xl font-semibold text-ink">
-                  Revenue Architecture &amp; Monetization Engine
+                  Revenue architecture and business model
                 </h2>
               </div>
 
@@ -107,7 +107,7 @@ export default function BusinessPage({
             {visualBriefing && (
               <div className={`p-4 rounded-card border ${visualBriefing.accentBorder} ${visualBriefing.accentBg} space-y-1 mt-4`}>
                 <span className={`font-mono text-[10px] uppercase tracking-wider font-bold block ${visualBriefing.accentText}`}>
-                  Strategic Moat: {visualBriefing.moatTitle}
+                  Strategic moat: {visualBriefing.moatTitle}
                 </span>
                 <p className="text-xs text-ink leading-relaxed">
                   {visualBriefing.moatDescription}
@@ -142,7 +142,7 @@ export default function BusinessPage({
             <div className="flex items-center gap-2">
               <PieChart className="w-5 h-5 text-accent" />
               <h2 className="font-serif text-xl font-semibold text-ink">
-                Reporting Segment Revenue Mix (FY2023 – FY2026)
+                Reporting segment revenue mix (FY2023–FY2026)
               </h2>
             </div>
             <span className="font-mono text-xs text-ink-muted">
@@ -164,7 +164,7 @@ export default function BusinessPage({
           <ShieldAlert className="w-5 h-5 text-negative" />
           <div>
             <h3 className="font-serif text-xl font-semibold text-ink">
-              Material Operational &amp; Regulatory Risks
+              Material operational and regulatory risks
             </h3>
             <p className="text-xs text-ink-muted">
               Distilled directly from Form 10-K Item 1A Risk Factors disclosures

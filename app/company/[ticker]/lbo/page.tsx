@@ -34,7 +34,7 @@ export default function LBOPage({
     <div className="space-y-6">
       <div className="pb-3 border-b border-line">
         <h2 className="font-serif text-2xl font-semibold text-ink">
-          {company.name} — Interactive Leveraged Buyout Analysis
+          {company.name}: interactive leveraged buyout analysis
         </h2>
         <p className="text-xs text-ink-muted mt-1">
           Adjust acquisition leverage, revenue growth, margin, and exit multiples to analyze returns (MOIC & IRR) and value creation attribution in real time.

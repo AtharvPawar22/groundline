@@ -24,7 +24,7 @@ export default function HomePage() {
       secondaryMetric: { label: "Gross Margin", value: "71.1%" },
       tertiaryMetric: { label: "FY26 Revenue", value: "$215.9B" },
       coreThesis:
-        "The fabless semiconductor model captures extreme gross margins (71%+) and operational leverage by delegating heavy manufacturing CapEx to TSMC while locking in developers via the proprietary CUDA computing ecosystem.",
+        "Fabless chip design shifts heavy fabrication capital expenditures to TSMC, supporting 71% gross margins and high cash flow while developers build on the proprietary CUDA computing ecosystem.",
       url: "/company/NVDA/overview",
     },
     {
@@ -42,7 +42,7 @@ export default function HomePage() {
       secondaryMetric: { label: "Free Cash Flow", value: "$9.5B" },
       tertiaryMetric: { label: "FY25 Revenue", value: "$45.2B" },
       coreThesis:
-        "Content amortization is not a non-cash historical sunk cost—it reflects a perpetual $17B+ annual cash reinvestment cycle required to sustain 300M+ global subscribers and high-margin programmatic ad tiers.",
+        "Content amortization is not a non-cash historical sunk cost. It represents an ongoing cash reinvestment cycle of over $17B annually to maintain 300M subscribers and advertising tiers.",
       url: "/company/NFLX/overview",
     },
     {
@@ -73,12 +73,6 @@ export default function HomePage() {
           <span className="font-semibold uppercase tracking-widest text-accent px-2.5 py-0.5 bg-accent-light rounded border border-accent/20">
             Primary Financial Research
           </span>
-          <span className="text-line-strong">·</span>
-          <span>Three Companies</span>
-          <span className="text-line-strong">·</span>
-          <span>Three Accounting Frameworks</span>
-          <span className="text-line-strong">·</span>
-          <span className="text-ink-faint">SEC 10-K &amp; 10-Q Verified</span>
         </div>
 
         <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-ink leading-tight tracking-tight">
@@ -86,7 +80,7 @@ export default function HomePage() {
         </h1>
 
         <p className="text-sm sm:text-base text-ink-muted leading-relaxed font-sans max-w-3xl">
-          Every figure across these three companies is dual-purpose: an audited, primary-sourced factual disclosure from SEC Form 10-K, 10-Q, and 8-K filings, and an interactive gateway into what the concept means, why institutional analysts care, and how the mathematics apply in real-world valuation.
+          Every figure across these three companies comes directly from SEC Form 10-K, 10-Q, or 8-K filings. Select any metric to see its definition, formula, and business context.
         </p>
       </section>
 
@@ -95,7 +89,7 @@ export default function HomePage() {
         <div className="flex items-center justify-between">
           <div>
             <h2 className="font-serif text-2xl font-semibold text-ink">
-              Company Research Dossiers
+              Company profiles
             </h2>
             <p className="text-xs text-ink-muted mt-0.5">
               Select a company to explore financial statements, business mechanics, valuation, and interactive financial models.
@@ -208,12 +202,12 @@ export default function HomePage() {
         <div className="flex items-center gap-2">
           <Scale className="w-5 h-5 text-accent" />
           <h2 className="font-serif text-xl font-semibold text-ink">
-            Why One Valuation Formula Does Not Fit All Three
+            Why one valuation formula does not fit all three companies
           </h2>
         </div>
         
         <p className="text-xs sm:text-sm text-ink-muted leading-relaxed max-w-3xl">
-          Standard enterprise SaaS tools attempt to apply identical EV/EBITDA multiples and balance sheet formulas across all sectors. GROUNDLINE illustrates the specific boundaries where corporate finance formulas fail when misapplied:
+          Standard financial screening tools often apply identical EV/EBITDA multiples across every industry. Different business models require different metrics:
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
@@ -223,27 +217,27 @@ export default function HomePage() {
               <span>Semiconductor (NVDA)</span>
             </div>
             <p className="text-xs text-ink-muted leading-relaxed">
-              Fabless design concentrates economic value in IP, software ecosystem (CUDA), and system packaging. CapEx is extremely low (~2.6% of revenue) yielding ~50%+ FCF conversion.
+              Fabless design concentrates value in IP, the CUDA software ecosystem, and packaging. CapEx is low (~2.6% of revenue), which produces free cash flow conversion above 50%.
             </p>
           </div>
 
           <div className="p-4 bg-paper rounded border border-line/80 space-y-1.5">
             <div className="flex items-center gap-2 font-serif text-sm font-semibold text-ink">
               <span className="w-2 h-2 rounded-full bg-accent-nflx" />
-              <span>Streaming Media (NFLX)</span>
+              <span>Streaming media (NFLX)</span>
             </div>
             <p className="text-xs text-ink-muted leading-relaxed">
-              EBITDA is distorted by $20B+ content amortization add-backs. True cash generation is governed by Free Cash Flow after mandatory content production spend.
+              EBITDA adds back over $17B in content amortization. Real cash generation depends on free cash flow after content production spending.
             </p>
           </div>
 
           <div className="p-4 bg-paper rounded border border-line/80 space-y-1.5">
             <div className="flex items-center gap-2 font-serif text-sm font-semibold text-ink">
               <span className="w-2 h-2 rounded-full bg-accent-jpm" />
-              <span>Banking &amp; Capital (JPM)</span>
+              <span>Banking and capital (JPM)</span>
             </div>
             <p className="text-xs text-ink-muted leading-relaxed">
-              Enterprise Value and EV/EBITDA are mathematically inapplicable. Valuation is driven by ROTCE (20.0%), Price-to-Tangible-Book (2.33x), and CET1 regulatory capital.
+              Enterprise value and EV/EBITDA do not apply to commercial banks. Valuation is driven by ROTCE (20.0%), price to tangible book (2.33x), and CET1 regulatory capital.
             </p>
           </div>
         </div>
@@ -258,7 +252,7 @@ export default function HomePage() {
           <Scale className="w-5 h-5 text-accent shrink-0 mt-0.5 group-hover:scale-105 transition-transform" />
           <div>
             <span className="font-serif text-base font-semibold text-ink block group-hover:text-accent transition-colors">
-              Cross-Company Benchmark
+              Cross-company comparison
             </span>
             <span className="text-xs text-ink-muted leading-relaxed block mt-1">
               Side-by-side comparison across 8 core financial metrics with interactive toggle charts.
@@ -273,7 +267,7 @@ export default function HomePage() {
           <BookOpen className="w-5 h-5 text-accent shrink-0 mt-0.5 group-hover:scale-105 transition-transform" />
           <div>
             <span className="font-serif text-base font-semibold text-ink block group-hover:text-accent transition-colors">
-              Financial Concepts Dictionary
+              Financial concepts dictionary
             </span>
             <span className="text-xs text-ink-muted leading-relaxed block mt-1">
               25+ institutional finance concepts with formulas, analytical relevance, and company examples.
@@ -288,7 +282,7 @@ export default function HomePage() {
           <FileText className="w-5 h-5 text-accent shrink-0 mt-0.5 group-hover:scale-105 transition-transform" />
           <div>
             <span className="font-serif text-base font-semibold text-ink block group-hover:text-accent transition-colors">
-              Primary SEC Filings Directory
+              Primary SEC filings directory
             </span>
             <span className="text-xs text-ink-muted leading-relaxed block mt-1">
               Complete index of Form 10-K, 10-Q, and 8-K accession numbers and direct EDGAR links.

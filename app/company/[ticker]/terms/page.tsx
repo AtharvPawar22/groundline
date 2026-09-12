@@ -25,10 +25,10 @@ export default function KeyTermsPage({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-line gap-2">
         <div>
           <h2 className="font-serif text-2xl font-semibold text-ink">
-            {company.name} — Core Financial Glossary
+            {company.name}: core financial glossary
           </h2>
           <p className="text-xs text-ink-muted mt-0.5">
-            Key concepts and metrics governing {company.name}&apos;s business model with live company numbers.
+            Key concepts and metrics governing {company.name}&apos;s business model with company numbers.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export default function KeyTermsPage({
           className="text-xs font-mono text-accent hover:underline inline-flex items-center gap-1.5 shrink-0"
         >
           <BookOpen className="w-3.5 h-3.5" />
-          <span>Browse Complete Global Glossary</span>
+          <span>Browse full glossary</span>
           <ArrowRight className="w-3 h-3" />
         </Link>
       </div>

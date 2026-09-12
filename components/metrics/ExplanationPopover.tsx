@@ -127,7 +127,7 @@ export default function ExplanationPopover({
       {/* Block 1: Plain English Meaning */}
       <div className="p-3 bg-paper rounded-control border border-line/60 space-y-1">
         <span className="font-mono text-[10px] uppercase tracking-wider text-ink-muted block font-semibold">
-          1. Plain English Meaning
+          1. Plain English meaning
         </span>
         <p className="text-ink leading-relaxed">
           {explanation.whatItMeans}
@@ -137,7 +137,7 @@ export default function ExplanationPopover({
       {/* Block 2: Institutional Relevance */}
       <div className="p-3 bg-paper rounded-control border border-line/60 space-y-1">
         <span className="font-mono text-[10px] uppercase tracking-wider text-ink-muted block font-semibold">
-          2. Institutional Relevance
+          2. Relevance
         </span>
         <p className="text-ink-muted leading-relaxed">
           {explanation.whyItMatters}
@@ -148,7 +148,7 @@ export default function ExplanationPopover({
       {formula && (
         <div className="p-3 bg-paper rounded-control border border-line/60 space-y-1">
           <span className="font-mono text-[10px] uppercase tracking-wider text-ink-muted block font-semibold">
-            3. Exact Financial Formula
+            3. Formula
           </span>
           <div className="bg-paper-raised px-2.5 py-1.5 rounded font-mono text-[11px] text-ink border border-line">
             <span className="text-accent font-semibold">fx: </span>
@@ -162,7 +162,7 @@ export default function ExplanationPopover({
         <div className={`p-3.5 rounded-control border ${accentStyles.border} ${accentStyles.bg}`}>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1.5">
             <span className={`font-mono text-[10px] uppercase tracking-wider ${accentStyles.text} font-bold`}>
-              4. {companyTicker.toUpperCase()} Application ({companyExp.periodLabel || "Reported"})
+              4. {companyTicker.toUpperCase()} application ({companyExp.periodLabel || "Reported"})
             </span>
             {companyExp.exampleValue && (
               <span className="font-serif text-xs font-semibold text-ink tabular-nums">
@@ -182,7 +182,7 @@ export default function ExplanationPopover({
           <AlertTriangle className="w-3.5 h-3.5 shrink-0 mt-0.5" />
           <div>
             <span className="font-bold block font-mono text-[10px] uppercase tracking-wider">
-              Analytical Warning / Caveat:
+              Analytical caveat
             </span>
             <span className="leading-relaxed mt-0.5 block">{caveat}</span>
           </div>
@@ -197,7 +197,7 @@ export default function ExplanationPopover({
           className="text-accent hover:underline inline-flex items-center gap-1 font-medium"
         >
           <BookOpen className="w-3.5 h-3.5" />
-          <span>Full Glossary Deep Dive</span>
+          <span>Full glossary definition</span>
           <ArrowRight className="w-3 h-3" />
         </Link>
         <span className="text-[10px] text-ink-faint hidden sm:inline">

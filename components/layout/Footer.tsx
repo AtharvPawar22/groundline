@@ -10,24 +10,23 @@ export default function Footer() {
               GROUNDLINE
             </span>
             <p className="text-xs text-ink-muted mt-1 max-w-md">
-              A bespoke editorial financial research platform demonstrating that different
-              industries require distinct analytical frameworks. Sourced from primary SEC
-              filings and official investor disclosures.
+              Financial research covering three public companies across different
+              industries. Sourced from primary SEC filings and company reports.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-ink-muted font-mono">
             <Link href="/compare" className="hover:text-ink transition-colors">
-              Peer Comparison
+              Peer comparison
             </Link>
             <Link href="/glossary" className="hover:text-ink transition-colors">
-              Finance Glossary
+              Finance glossary
             </Link>
             <Link href="/methodology" className="hover:text-ink transition-colors">
-              Methodology & Notes
+              Methodology and notes
             </Link>
             <Link href="/sources" className="hover:text-ink transition-colors">
-              SEC Filings Directory
+              SEC filings directory
             </Link>
           </div>
         </div>
@@ -37,7 +36,7 @@ export default function Footer() {
             Dataset reference date: <span className="font-mono text-ink-muted">September 2, 2026</span> · Form 10-K, 10-Q & 8-K primary filings.
           </div>
           <div>
-            Not investment advice. Strictly designed for educational financial literacy.
+            Not investment advice. For educational purposes.
           </div>
         </div>
       </div>

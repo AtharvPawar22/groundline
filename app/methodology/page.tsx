@@ -8,7 +8,7 @@ export default function MethodologyPage() {
         <div className="flex items-center gap-2 mb-2">
           <ShieldCheck className="w-5 h-5 text-accent" />
           <h1 className="font-serif text-2xl font-semibold text-ink">
-            Methodology, Accounting Standards &amp; Research Governance
+            Methodology, accounting standards, and research governance
           </h1>
         </div>
         <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -23,7 +23,7 @@ export default function MethodologyPage() {
             <div className="flex items-center gap-2.5">
               <span className="w-2.5 h-2.5 rounded-full bg-accent-nflx" />
               <h2 className="font-serif text-base font-semibold text-ink">
-                1. The Netflix EBITDA &amp; Content Amortization Standard
+                1. Netflix EBITDA and content amortization standard
               </h2>
             </div>
             <span className="font-mono text-[10px] uppercase px-2 py-0.5 bg-accent-nflx/10 text-accent-nflx rounded font-semibold border border-accent-nflx/20">
@@ -31,14 +31,14 @@ export default function MethodologyPage() {
             </span>
           </div>
           <p className="text-ink-muted leading-relaxed">
-            Secondary financial data aggregators frequently conflict regarding Netflix&apos;s EBITDA. For example, GuruFocus reports a TTM EBITDA of ~$35.0B (yielding a misleadingly low 8.97x EV/EBITDA multiple) by adding back all streaming content amortization. StockAnalysis and Bloomberg report EBITDA of ~$13.3B–$14.8B (yielding 23.2x EV/EBITDA).
+            Data providers disagree on Netflix EBITDA. GuruFocus reports TTM EBITDA of ~$35.0B (an 8.97x EV/EBITDA multiple) by adding back all streaming content amortization. StockAnalysis and Bloomberg report EBITDA of ~$13.3B–$14.8B (a 23.2x EV/EBITDA multiple).
           </p>
           <div className="p-4 bg-paper rounded border border-line/70 space-y-1.5">
             <span className="font-mono text-[10px] uppercase tracking-wider text-accent font-semibold block">
-              GROUNDLINE Standard Decision:
+              Accounting decision
             </span>
             <p className="text-ink-muted leading-relaxed">
-              We reject the $35B figure and adopt the strict operational standard: streaming content amortization represents an ongoing, mandatory cash reinvestment cycle (~$17B+ annually) rather than non-cash legacy machinery depreciation. Adding it back distorts true debt capacity.
+              We follow the operational standard: streaming content amortization represents an ongoing cash reinvestment cycle (~$17B+ annually) rather than non-cash machinery depreciation. Adding it back overstates cash generation and debt capacity.
             </p>
           </div>
         </section>
@@ -49,7 +49,7 @@ export default function MethodologyPage() {
             <div className="flex items-center gap-2.5">
               <span className="w-2.5 h-2.5 rounded-full bg-accent-jpm" />
               <h2 className="font-serif text-base font-semibold text-ink">
-                2. Commercial Banking &amp; Regulatory Capital Framework
+                2. Commercial banking and regulatory capital framework
               </h2>
             </div>
             <span className="font-mono text-[10px] uppercase px-2 py-0.5 bg-accent-jpm/10 text-accent-jpm rounded font-semibold border border-accent-jpm/20">
@@ -57,10 +57,10 @@ export default function MethodologyPage() {
             </span>
           </div>
           <p className="text-ink-muted leading-relaxed">
-            For commercial banks, customer deposits are operational liabilities that fund loan creation, not voluntary corporate debt. Standard enterprise value formulas (EV = Market Cap + Debt − Cash) yield mathematically absurd results ($780B EV vs. $955B Market Cap).
+            For commercial banks, customer deposits are operational liabilities that fund loan creation, not corporate debt. Standard enterprise value formulas (EV = market cap + debt - cash) produce distorted figures ($780B EV compared to $955B market capitalization).
           </p>
           <p className="text-ink-muted leading-relaxed">
-            We strictly enforce bank-appropriate metrics across all JPMorgan views: <strong>Managed Net Revenue</strong> (taxable-equivalent basis), <strong>Return on Tangible Common Equity (ROTCE)</strong>, <strong>Tangible Book Value Per Share (TBVPS)</strong>, and <strong>Common Equity Tier 1 (CET1)</strong> capital ratios.
+            All JPMorgan views use bank-appropriate metrics, including <strong>Managed Net Revenue</strong> (taxable-equivalent basis), <strong>Return on Tangible Common Equity (ROTCE)</strong>, <strong>Tangible Book Value Per Share (TBVPS)</strong>, and <strong>Common Equity Tier 1 (CET1)</strong> capital ratios.
           </p>
         </section>
 
@@ -70,7 +70,7 @@ export default function MethodologyPage() {
             <div className="flex items-center gap-2.5">
               <span className="w-2.5 h-2.5 rounded-full bg-accent-nvda" />
               <h2 className="font-serif text-base font-semibold text-ink">
-                3. NVIDIA Fiscal Period Timing &amp; Naming
+                3. NVIDIA fiscal period timing and naming
               </h2>
             </div>
             <span className="font-mono text-[10px] uppercase px-2 py-0.5 bg-accent-nvda/10 text-accent-nvda rounded font-semibold border border-accent-nvda/20">
@@ -88,7 +88,7 @@ export default function MethodologyPage() {
             <div className="flex items-center gap-2.5">
               <span className="w-2.5 h-2.5 rounded-full bg-accent" />
               <h2 className="font-serif text-base font-semibold text-ink">
-                4. Leveraged Buyout Model Conventions
+                4. Leveraged buyout model conventions
               </h2>
             </div>
             <span className="font-mono text-[10px] uppercase px-2 py-0.5 bg-accent-light text-accent rounded font-semibold border border-accent/20">
@@ -97,16 +97,16 @@ export default function MethodologyPage() {
           </div>
           <ul className="list-disc pl-5 space-y-2 text-ink-muted leading-relaxed">
             <li>
-              <strong>Interest Calculation:</strong> Interest is calculated against the Beginning-of-Year (BOY) debt balance to eliminate circular reference loops.
+              <strong>Interest calculation:</strong> Interest is calculated against the beginning-of-year debt balance to avoid circular references.
             </li>
             <li>
-              <strong>Maintenance CapEx:</strong> Annual Depreciation &amp; Amortization is assumed equal to Capital Expenditures (D&amp;A = CapEx) to model a steady-state maintenance capital profile.
+              <strong>Maintenance CapEx:</strong> Annual depreciation and amortization is set equal to capital expenditures (D&amp;A = CapEx) to model a steady-state maintenance capital profile.
             </li>
             <li>
-              <strong>Cash Sweep:</strong> 100% of Cash Flow Available for Debt Service (CFADS) is swept to prepay acquisition debt until debt reaches $0, after which excess cash accumulates on the balance sheet.
+              <strong>Cash sweep:</strong> 100% of cash flow available for debt service is swept to prepay debt until debt reaches $0, after which cash accumulates on the balance sheet.
             </li>
             <li>
-              <strong>Value Creation Attribution:</strong> The bridge mathematically partitions returns into EBITDA Growth, Multiple Expansion, Debt Paydown, and Fees with 100% exact equality to exit equity.
+              <strong>Value creation attribution:</strong> The bridge partitions equity returns into EBITDA growth, multiple expansion, debt paydown, and transaction fees.
             </li>
           </ul>
         </section>

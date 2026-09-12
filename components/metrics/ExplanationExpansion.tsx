@@ -53,14 +53,14 @@ export default function ExplanationExpansion({
         <div className="flex items-center gap-2">
           <HelpCircle className="w-4 h-4 text-accent shrink-0" />
           <h4 className="font-serif text-sm font-semibold text-ink">
-            {metricDef?.displayName || explanation.metricId.toUpperCase()} — Contextual Breakdown
+            {metricDef?.displayName || explanation.metricId.toUpperCase()}, contextual breakdown
           </h4>
         </div>
         <Link
           href={`/glossary/${explanation.metricId}`}
           className="text-xs font-mono text-accent hover:underline inline-flex items-center gap-1 self-start sm:self-auto"
         >
-          <span>Deep Dive Glossary</span>
+          <span>Glossary definition</span>
           <ArrowRight className="w-3 h-3" />
         </Link>
       </div>
@@ -70,7 +70,7 @@ export default function ExplanationExpansion({
         {/* Block 1: What it means */}
         <div className="p-3 bg-paper rounded-control border border-line/50 space-y-1">
           <span className="font-mono text-[10px] uppercase tracking-wider text-ink-muted block font-semibold">
-            1. Plain English Meaning
+            1. Plain English meaning
           </span>
           <p className="text-ink leading-relaxed">
             {explanation.whatItMeans}
@@ -80,7 +80,7 @@ export default function ExplanationExpansion({
         {/* Block 2: Why it matters */}
         <div className="p-3 bg-paper rounded-control border border-line/50 space-y-1">
           <span className="font-mono text-[10px] uppercase tracking-wider text-ink-muted block font-semibold">
-            2. Institutional Relevance
+            2. Relevance
           </span>
           <p className="text-ink-muted leading-relaxed">
             {explanation.whyItMatters}
@@ -92,7 +92,7 @@ export default function ExplanationExpansion({
       {formula && (
         <div className="mt-3 p-3 bg-paper rounded-control border border-line/50">
           <span className="font-mono text-[10px] uppercase tracking-wider text-ink-muted block mb-1 font-semibold">
-            3. Exact Financial Formula
+            3. Formula
           </span>
           <div className="bg-paper-raised px-3 py-1.5 rounded font-mono text-[11px] text-ink border border-line">
             {formula}
@@ -105,7 +105,7 @@ export default function ExplanationExpansion({
         <div className={`mt-3 p-3.5 rounded-control border ${accentStyles.border} ${accentStyles.bg}`}>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1.5">
             <span className={`font-mono text-[10px] uppercase tracking-wider ${accentStyles.text} font-bold`}>
-              4. {companyTicker} Specific Application ({companyExp.periodLabel || "Current"})
+              4. {companyTicker} application ({companyExp.periodLabel || "Current"})
             </span>
             {companyExp.exampleValue && (
               <span className="font-serif text-xs font-semibold text-ink tabular-nums">
@@ -125,7 +125,7 @@ export default function ExplanationExpansion({
           <AlertTriangle className="w-3.5 h-3.5 shrink-0 mt-0.5" />
           <div>
             <span className="font-bold block font-mono text-[10px] uppercase tracking-wider">
-              Analytical Warning / Misconception:
+              Analytical caveat
             </span>
             <span className="leading-relaxed mt-0.5 block">{caveat}</span>
           </div>

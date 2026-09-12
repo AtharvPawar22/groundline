@@ -41,7 +41,7 @@ export default function Header() {
               <span>GROUNDLINE</span>
             </Link>
             <span className="hidden md:inline-block text-[11px] uppercase tracking-widest text-ink-muted border-l border-line pl-4 font-mono">
-              Research Dossier
+              Research dossier
             </span>
           </div>
 
@@ -107,7 +107,7 @@ export default function Header() {
         <div className="md:hidden border-b border-line bg-paper-raised/98 backdrop-blur-lg px-4 pt-3 pb-6 space-y-4 animate-in slide-in-from-top-2 duration-150">
           <div>
             <span className="font-mono text-[10px] uppercase tracking-widest text-ink-faint block mb-2 px-2">
-              Company Dossiers
+              Companies
             </span>
             <div className="grid grid-cols-1 gap-1.5">
               {companies.map((c) => {
@@ -137,7 +137,7 @@ export default function Header() {
 
           <div className="border-t border-line/60 pt-3">
             <span className="font-mono text-[10px] uppercase tracking-widest text-ink-faint block mb-2 px-2">
-              Tools &amp; References
+              Tools and references
             </span>
             <div className="grid grid-cols-2 gap-2">
               {tools.map((link) => {

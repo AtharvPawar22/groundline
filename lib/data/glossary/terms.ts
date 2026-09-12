@@ -34,7 +34,7 @@ export const metricDefinitions: MetricDefinition[] = [
     displayName: "EBITDA",
     category: "Income Statement",
     definition: "Earnings Before Interest, Taxes, Depreciation, and Amortization. An operational metric designed to approximate cash generated from core business activities by adding back non-cash accounting expenses.",
-    whyItMatters: "EBITDA is the universal baseline for comparing companies with different capital structures, asset ages, and tax regimes, and serves as the primary denominator for LBO leverage and M&A multiples.",
+    whyItMatters: "EBITDA provides a baseline for comparing companies with different capital structures, asset ages, and tax regimes. It is the primary denominator for LBO leverage and M&A multiples.",
     formula: "EBITDA = Operating Income + Depreciation + Amortization",
     applicableTo: ["NVDA", "NFLX"],
     caveat: "EBITDA ignores real cash outlays for working capital, capital expenditures, and recurring content production costs.",
@@ -92,7 +92,7 @@ export const metricDefinitions: MetricDefinition[] = [
     displayName: "Market Capitalization",
     category: "Valuation",
     definition: "The total equity value assigned to a publicly traded corporation by the stock market at a given point in time.",
-    whyItMatters: "Market cap determines a company's size classification (large-cap, mega-cap) and serves as the starting point for calculating Enterprise Value and equity valuation ratios.",
+    whyItMatters: "Market cap determines size classification (large-cap, mega-cap) and is the starting point for calculating enterprise value and equity valuation ratios.",
     formula: "Market Cap = Current Share Price × Total Diluted Shares Outstanding",
     applicableTo: ["NVDA", "NFLX", "JPM"],
     caveat: "Market cap measures equity value only; it completely ignores whether a company carries billions in debt or billions in net cash.",
@@ -101,7 +101,7 @@ export const metricDefinitions: MetricDefinition[] = [
     id: "enterprise_value",
     displayName: "Enterprise Value (EV)",
     category: "Valuation",
-    definition: "The total economic value of the entire operating business, representing what a buyer would pay to acquire the company on a cash-free, debt-free basis.",
+    definition: "The total economic value of an operating business, equal to what a buyer pays to acquire the company on a cash-free, debt-free basis.",
     whyItMatters: "Enterprise Value provides a capital-structure-neutral valuation baseline, enabling meaningful operational comparisons across companies with vastly different debt levels.",
     formula: "Enterprise Value = Market Capitalization + Total Debt − Cash & Equivalents",
     applicableTo: ["NVDA", "NFLX"],
@@ -132,7 +132,7 @@ export const metricDefinitions: MetricDefinition[] = [
     displayName: "Price / Book (P/B) & Tangible Book",
     category: "Bank Metrics",
     definition: "Market Capitalization divided by Stockholders' Equity (or Share Price divided by Tangible Book Value Per Share).",
-    whyItMatters: "The primary valuation multiple for commercial banks and financial institutions, reflecting the premium or discount the market assigns to a bank's net assets relative to its return on capital (ROTCE).",
+    whyItMatters: "The primary valuation multiple for commercial banks, measuring the premium or discount the market assigns to net assets relative to return on capital (ROTCE).",
     formula: "Price / Tangible Book = Market Price Per Share ÷ Tangible Common Equity Per Share",
     applicableTo: ["JPM"],
   },
@@ -240,7 +240,7 @@ export const glossaryExplanations: Record<string, ExplanationContent> = {
         periodLabel: "FY2026",
       },
       NFLX: {
-        text: "Netflix achieved $13.33B in FY2025 operating income, representing a 29.5% operating margin — meeting management's long-term margin expansion commitment.",
+        text: "Netflix achieved $13.33B in FY2025 operating income, a 29.5% operating margin that met management's long-term margin target.",
         exampleValue: "$13.33B (29.5% Margin)",
         periodLabel: "FY2025",
       },
@@ -253,12 +253,12 @@ export const glossaryExplanations: Record<string, ExplanationContent> = {
     formula: "Operating Income + Depreciation + Amortization",
     perCompany: {
       NVDA: {
-        text: "NVIDIA generated ~$201.3B in TTM EBITDA as of mid-2026 (~66% EBITDA margin), illustrating extreme cash-like profitability on an asset-light fabless model.",
+        text: "NVIDIA generated ~$201.3B in TTM EBITDA as of mid-2026 (~66% EBITDA margin), illustrating cash-like profitability on an asset-light fabless model.",
         exampleValue: "$201.3B",
         periodLabel: "TTM (Aug 2026)",
       },
       NFLX: {
-        text: "Netflix EBITDA requires careful methodology: StockAnalysis reports $14.8B TTM (operating income + minor PP&E D&A), while GuruFocus reports $35.0B by adding back content amortization. We follow the rigorous standard: content amortization is an ongoing operational cash cost and is NOT added back.",
+        text: "Netflix EBITDA requires careful methodology. StockAnalysis reports $14.8B TTM (operating income plus PP&E depreciation), while GuruFocus reports $35.0B by adding back content amortization. We follow the operational standard: content amortization is an ongoing cash cost and is not added back.",
         exampleValue: "$13.3B-$14.8B",
         periodLabel: "FY2025 / TTM",
         caveat: "Adding back content amortization creates an artificially inflated $35B EBITDA that misrepresents Netflix's true cash requirements.",
@@ -278,7 +278,7 @@ export const glossaryExplanations: Record<string, ExplanationContent> = {
         periodLabel: "FY2026",
       },
       NFLX: {
-        text: "Netflix delivered $10.98B in FY2025 net income (+26% YoY, 24.3% net margin), demonstrating substantial bottom-line operational leverage on streaming subscriptions.",
+        text: "Netflix delivered $10.98B in FY2025 net income (+26% YoY, 24.3% net margin), showing operating leverage on streaming subscriptions.",
         exampleValue: "$10.98B",
         periodLabel: "FY2025",
       },
@@ -297,7 +297,7 @@ export const glossaryExplanations: Record<string, ExplanationContent> = {
     formula: "Operating Cash Flow − Capital Expenditures",
     perCompany: {
       NVDA: {
-        text: "NVIDIA generated ~$69.9B in Free Cash Flow in the first half of FY2027 alone, reflecting extraordinary cash conversion given its modest $3.4B annual CapEx requirements.",
+        text: "NVIDIA generated ~$69.9B in Free Cash Flow in the first half of FY2027 alone, driven by high cash conversion against $3.4B in annual CapEx.",
         exampleValue: "$69.90B (H1 FY27)",
         periodLabel: "H1 FY2027",
       },
@@ -326,7 +326,7 @@ export const glossaryExplanations: Record<string, ExplanationContent> = {
         periodLabel: "Sep 1, 2026",
       },
       JPM: {
-        text: "JPMorgan Chase traded at ~$955B market capitalization in September 2026 (~$355.32/share × 2.66B shares), representing the largest bank equity valuation in the Western hemisphere.",
+        text: "JPMorgan Chase traded at ~$955B market capitalization in September 2026 (~$355.32/share × 2.66B shares), the largest bank equity valuation in the Western hemisphere.",
         exampleValue: "$955.0B",
         periodLabel: "Sep 1, 2026",
       },
@@ -358,12 +358,12 @@ export const glossaryExplanations: Record<string, ExplanationContent> = {
     formula: "Share Price ÷ Diluted EPS (or Market Cap ÷ Net Income)",
     perCompany: {
       NVDA: {
-        text: "NVIDIA trades at ~27.5x–27.9x trailing earnings — a relatively moderate multiple given its +65% growth, reflecting market expectations of future deceleration.",
+        text: "NVIDIA trades at ~27.5x–27.9x trailing earnings, a moderate multiple relative to its +65% growth as markets price in eventual deceleration.",
         exampleValue: "27.9x",
         periodLabel: "Sep 1, 2026",
       },
       NFLX: {
-        text: "Netflix trades at ~25.3x trailing earnings, reflecting steady mid-teens subscription revenue expansion and expanding operating margins.",
+        text: "Netflix trades at ~25.3x trailing earnings, supported by mid-teens subscription revenue growth and operating margin expansion.",
         exampleValue: "25.3x",
         periodLabel: "Sep 1, 2026",
       },

@@ -14,7 +14,7 @@ export const lboDefaults: Record<string, LBOAssumptionSet> = {
     defaultTaxRate: 0.20,
     defaultFeePercent: 0.025,
     scaleDisclaimer:
-      "No real leveraged buyout has ever been remotely this size. NVIDIA's ~$5.25T market capitalization exceeds the capacity of the entire global leveraged finance market combined (the historical record is the 2013 Dell buyout at $24.4B). This tool uses NVIDIA's real financial profile as an illustrative mechanics sandbox — it is not a claim that an LBO of this scale is financeable in the real world.",
+      "No real leveraged buyout has ever been remotely this size. NVIDIA's ~$5.25T market capitalization exceeds the capacity of the global leveraged finance market combined (the historical record is the 2013 Dell buyout at $24.4B). This tool uses NVIDIA's real financial profile as an illustrative mechanics sandbox. It is not a claim that an LBO of this scale is financeable in the real world.",
     isBankModule: false,
   },
   NFLX: {
@@ -30,7 +30,7 @@ export const lboDefaults: Record<string, LBOAssumptionSet> = {
     defaultTaxRate: 0.25,
     defaultFeePercent: 0.025,
     scaleDisclaimer:
-      "This simulator models an illustrative buyout tied directly to Netflix's real FY2025 operating income baseline ($13.3B) and cash generation profile, demonstrating how subscription cash flow amortizes acquisition leverage over a 5-year horizon.",
+      "This simulator models an illustrative buyout tied directly to Netflix's real FY2025 operating income baseline ($13.3B) and cash generation profile, showing how subscription cash flow amortizes acquisition leverage over a 5-year horizon.",
     isBankModule: false,
   },
   JPM: {

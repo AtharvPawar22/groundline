@@ -39,10 +39,10 @@ export default function SensitivityHeatmap({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-4 border-b border-line gap-3">
         <div>
           <h4 className="font-serif text-base font-semibold text-ink">
-            2-Axis Returns Sensitivity Matrix
+            2-axis returns sensitivity matrix
           </h4>
           <p className="text-xs text-ink-muted">
-            Exit Multiple (Rows) × Revenue CAGR (Columns) — fully recalculated per scenario
+            Exit Multiple (Rows) × Revenue CAGR (Columns), recalculated for each scenario
           </p>
         </div>
 

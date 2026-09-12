@@ -83,7 +83,7 @@ export default function ValuationPage({
       <section className="space-y-3">
         <div className="flex items-center justify-between border-b border-line pb-2">
           <h2 className="font-serif text-xl sm:text-2xl font-semibold text-ink">
-            Valuation Multiples &amp; Trading Metrics
+            Valuation multiples and trading metrics
           </h2>
           <span className="font-mono text-xs text-ink-muted">
             September 1, 2026 Market Baseline
@@ -148,7 +148,7 @@ export default function ValuationPage({
           <div className="flex items-center gap-2 pb-2 border-b border-line">
             <Scale className="w-5 h-5 text-accent" />
             <h3 className="font-serif text-lg font-semibold text-ink">
-              Enterprise Value Bridge Walk ($B)
+              Enterprise value bridge walk ($B)
             </h3>
           </div>
           <p className="text-xs text-ink-muted leading-relaxed">
@@ -189,7 +189,7 @@ export default function ValuationPage({
         <section className="p-6 sm:p-8 bg-paper-raised border-l-4 border-accent-jpm border border-line rounded-card shadow-xs text-xs space-y-2.5">
           <div className="flex items-center gap-2 text-ink font-serif text-base font-semibold">
             <AlertCircle className="w-5 h-5 text-accent-jpm" />
-            <span>Why Enterprise Value &amp; EV/EBITDA Break Down for JPMorgan Chase</span>
+            <span>Why enterprise value and EV/EBITDA do not apply to JPMorgan Chase</span>
           </div>
           <p className="text-xs sm:text-sm text-ink leading-relaxed font-sans pl-7">
             Unlike non-financial corporations where debt represents discretionary leverage, a commercial bank relies on customer deposits ($2.4+ trillion) as its fundamental operational funding inventory to create loans. Subtracting cash and adding liabilities according to the corporate EV formula produces an economically meaningless figure ($780B EV &lt; $955B Market Cap). Bank valuation is appropriately conducted via <strong>Price-to-Tangible-Book (2.33x)</strong>, <strong>ROTCE (20.0%)</strong>, and <strong>Trailing P/E (15.5x)</strong>.
@@ -200,7 +200,7 @@ export default function ValuationPage({
       {/* 3. Horizontal Multiple Charts */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <PeerBarChart
-          title="Trailing P/E Multiples Comparison"
+          title="Trailing P/E comparison"
           metricLabel="Price / Earnings (x)"
           items={peBarItems}
           accentColor={company.accentColor}
@@ -208,7 +208,7 @@ export default function ValuationPage({
 
         {!isBank && evEbitdaBarItems.length > 0 && (
           <PeerBarChart
-            title="EV / EBITDA Multiple Comparison"
+            title="EV / EBITDA comparison"
             metricLabel="Enterprise Value / EBITDA (x)"
             items={evEbitdaBarItems}
             accentColor={company.accentColor}

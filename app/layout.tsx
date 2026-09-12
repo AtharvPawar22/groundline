@@ -6,7 +6,7 @@ import Footer from "../components/layout/Footer";
 export const metadata: Metadata = {
   title: "GROUNDLINE | Deep Financial Research",
   description:
-    "A restrained, publication-grade financial research platform examining NVIDIA, Netflix, and JPMorgan Chase with full accounting rigor, primary SEC citations, and contextual financial literacy.",
+    "Financial research on NVIDIA, Netflix, and JPMorgan Chase, with primary SEC citations and plain-English financial context.",
   icons: {
     icon: "/favicon.svg",
   },

@@ -35,7 +35,7 @@ export default function TermDetailPage({
         className="inline-flex items-center gap-2 text-xs font-mono text-ink-muted hover:text-ink transition-colors bg-paper px-2.5 py-1.5 rounded border border-line shadow-xs"
       >
         <ArrowLeft className="w-3.5 h-3.5" />
-        <span>Back to Financial Glossary</span>
+        <span>Back to financial glossary</span>
       </Link>
 
       {/* Main Term Header */}
@@ -63,7 +63,7 @@ export default function TermDetailPage({
         {/* 1. What it means */}
         <section className="p-5 sm:p-6 bg-paper-raised border border-line rounded-card shadow-xs space-y-1.5">
           <span className="font-mono text-xs uppercase tracking-wider text-accent font-bold block">
-            1. Plain English Meaning
+            1. Plain English meaning
           </span>
           <p className="text-xs sm:text-sm text-ink leading-relaxed">
             {explanation.whatItMeans}
@@ -73,7 +73,7 @@ export default function TermDetailPage({
         {/* 2. Why it matters */}
         <section className="p-5 sm:p-6 bg-paper-raised border border-line rounded-card shadow-xs space-y-1.5">
           <span className="font-mono text-xs uppercase tracking-wider text-accent font-bold block">
-            2. Institutional Investor &amp; Analyst Relevance
+            2. Investor and analyst relevance
           </span>
           <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
             {explanation.whyItMatters}
@@ -84,7 +84,7 @@ export default function TermDetailPage({
         {(explanation.formula || metric.formula) && (
           <section className="p-5 sm:p-6 bg-paper-raised border border-line rounded-card shadow-xs space-y-2">
             <span className="font-mono text-xs uppercase tracking-wider text-accent font-bold block">
-              3. Mathematical Definition &amp; Formula
+              3. Formula
             </span>
             <div className="p-3.5 bg-paper rounded-control font-mono text-xs text-ink border border-line/60">
               {explanation.formula || metric.formula}
@@ -95,7 +95,7 @@ export default function TermDetailPage({
         {/* 4. Applied Context across all three companies */}
         <section className="p-5 sm:p-6 bg-paper-raised border border-line rounded-card shadow-xs space-y-4">
           <span className="font-mono text-xs uppercase tracking-wider text-accent font-bold block pb-2 border-b border-line">
-            4. Real-World Application Across Companies
+            4. Application across companies
           </span>
 
           <div className="space-y-3.5">
@@ -140,7 +140,7 @@ export default function TermDetailPage({
             <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
             <div>
               <span className="font-bold block font-mono text-[11px] uppercase tracking-wider">
-                Analytical Caveat &amp; Misconception:
+                Analytical caveat
               </span>
               <p className="mt-0.5 leading-relaxed">
                 {explanation.globalCaveat || metric.caveat}

@@ -73,11 +73,11 @@ export default function ComparePage() {
         <div className="flex items-center gap-2.5 mb-2">
           <Scale className="w-5 h-5 text-accent" />
           <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-ink">
-            Cross-Company Financial Comparison
+            Cross-company financial comparison
           </h2>
         </div>
         <p className="text-xs sm:text-sm text-ink-muted leading-relaxed max-w-3xl">
-          Comparing three distinct business models: an asset-light semiconductor AI platform (NVIDIA), a subscription streaming media service (Netflix), and a diversified commercial bank (JPMorgan Chase). Notice where metrics apply equally and where industry accounting boundaries diverge.
+          This comparison covers three distinct business models: NVIDIA (semiconductors), Netflix (subscription media), and JPMorgan Chase (commercial banking). It highlights where metrics compare directly and where standard corporate finance measures break down.
         </p>
       </div>
 
@@ -146,7 +146,7 @@ export default function ComparePage() {
       <div className="bg-paper-raised border border-line rounded-card overflow-hidden shadow-xs">
         <div className="p-4 sm:p-5 border-b border-line bg-paper/40 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
           <h3 className="font-serif text-base font-semibold text-ink">
-            Multi-Company Financial Summary Table
+            Multi-company financial summary
           </h3>
           <span className="text-[10px] font-mono text-ink-faint">
             ← Swipe table horizontally →
@@ -252,10 +252,10 @@ export default function ComparePage() {
       <div className="p-5 sm:p-6 bg-paper-raised border-l-4 border-accent-jpm border border-line rounded-card shadow-xs text-xs space-y-2">
         <div className="flex items-center gap-2 font-serif text-sm font-semibold text-ink">
           <AlertCircle className="w-4 h-4 text-accent-jpm" />
-          <span>Analytical Note on Cross-Industry Comparability</span>
+          <span>Cross-industry comparability note</span>
         </div>
         <p className="text-ink leading-relaxed sm:pl-6">
-          Notice that while <strong>Market Cap, Revenue, Net Income, and P/E</strong> compare cleanly across all three companies, <strong>EV/EBITDA, Free Cash Flow, and standard LBO leverage</strong> are strictly omitted for JPMorgan Chase. A bank&apos;s deposits are its operational inventory to generate interest spread profits; netting them like corporate debt produces false signals. True financial literacy requires knowing when to put an analytical framework away.
+          While <strong>Market Cap, Revenue, Net Income, and P/E</strong> compare directly across all three companies, <strong>EV/EBITDA, Free Cash Flow, and standard LBO leverage</strong> do not apply to JPMorgan Chase. Customer deposits are funding liabilities rather than corporate debt. Netting deposits against cash distorts enterprise value and cash flow metrics, which is why bank analysis relies on return on equity, book value multiples, and regulatory capital ratios instead.
         </p>
       </div>
     </div>

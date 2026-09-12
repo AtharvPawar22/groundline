@@ -69,8 +69,8 @@ export default function FinancialsPage({
   // Custom Waterfall Step-Down Data per company
   const waterfallSteps = {
     NVDA: {
-      title: "FY2026 Earnings Step-Down Waterfall",
-      subtitle: "From $215.9B Top-Line Revenue to $120.1B GAAP Net Income",
+      title: "FY2026 earnings step-down waterfall",
+      subtitle: "From $215.9B top-line revenue to $120.1B GAAP net income",
       steps: [
         { label: "Revenue", amount: 215938, type: "total" as const, subtext: "100% Top Line" },
         { label: "Cost of Rev.", amount: -62406, type: "deduction" as const, subtext: "Wafer/Packaging" },
@@ -81,8 +81,8 @@ export default function FinancialsPage({
       ],
     },
     NFLX: {
-      title: "FY2025 Revenue to Free Cash Flow Waterfall",
-      subtitle: "How $45.2B in subscription revenues converts to $9.5B in true cash generation",
+      title: "FY2025 revenue to free cash flow waterfall",
+      subtitle: "How $45.2B in subscription revenues converts to $9.5B in free cash flow",
       steps: [
         { label: "Revenue", amount: 45183, type: "total" as const, subtext: "Subscriptions" },
         { label: "Content Amort.", amount: -15500, type: "deduction" as const, subtext: "Content Cost" },
@@ -95,8 +95,8 @@ export default function FinancialsPage({
       ],
     },
     JPM: {
-      title: "FY2025 Banking Revenue to Bottom-Line Profit",
-      subtitle: "Managed net revenue spread conversion to record $57.0B net income",
+      title: "FY2025 banking revenue to bottom-line profit",
+      subtitle: "Managed net revenue spread conversion to $57.0B net income",
       steps: [
         { label: "Managed Rev.", amount: 182100, type: "total" as const, subtext: "Spread + Fees" },
         { label: "Noninterest Exp.", amount: -96000, type: "deduction" as const, subtext: "Compensation/Tech" },
@@ -113,7 +113,7 @@ export default function FinancialsPage({
       {/* 1. Multi-Year Historical Trend Chart */}
       <section>
         <TrendChart
-          title={`${company.name} — 5-Year Revenue & Net Income Trajectory`}
+          title={`${company.name}: 5-year revenue and net income trajectory`}
           subtitle="Annual reported financial statement performance (FY2021/2022 to FY2025/2026)"
           data={trendData}
           accentColor={company.accentColor}
@@ -140,7 +140,7 @@ export default function FinancialsPage({
       <section>
         <div className="flex items-center justify-between mb-2">
           <h3 className="font-serif text-lg font-semibold text-ink">
-            Consolidated Financial Statements
+            Consolidated financial statements
           </h3>
           <span className="font-mono text-xs text-ink-muted">
             Audited 10-K disclosures in $USD Millions

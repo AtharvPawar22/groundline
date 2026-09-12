@@ -154,7 +154,7 @@ export const peerCompanies: Peer[] = [
     rotce: 0.142,
     asOfDate: "Sep 1, 2026",
     rationale:
-      "Direct peer specifically for JPMorgan's Commercial & Investment Bank (CIB) segment — investment banking advisory, equity/debt underwriting, and institutional trading.",
+      "Direct peer specifically for JPMorgan's Commercial & Investment Bank (CIB) segment, covering investment banking advisory, equity/debt underwriting, and institutional trading.",
     keyDifference:
       "Goldman has negligible retail branch consumer deposits, funding itself through wholesale markets and wealth deposits. Its higher forward multiple (17.8x) reflects advisory-led capital-light earnings rather than deposit spread intermediation.",
     usefulMultiples: ["P / E", "Price / Tangible Book", "ROE"],

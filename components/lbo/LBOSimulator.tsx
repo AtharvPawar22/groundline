@@ -100,7 +100,7 @@ export default function LBOSimulator({
             <div className="flex items-center gap-2">
               <Sliders className="w-4 h-4 text-accent" />
               <h3 className="font-serif text-base font-semibold text-ink">
-                Model Assumptions
+                Model assumptions
               </h3>
             </div>
             <button
@@ -205,7 +205,7 @@ export default function LBOSimulator({
               onClick={() => setShowAdvanced(!showAdvanced)}
               className="flex items-center justify-between w-full text-xs font-mono text-ink-muted hover:text-ink py-1.5 cursor-pointer"
             >
-              <span>Advanced Parameters (Fees, Taxes, CapEx)</span>
+              <span>Advanced parameters (fees, taxes, CapEx)</span>
               {showAdvanced ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
             </button>
 
@@ -284,7 +284,7 @@ export default function LBOSimulator({
           {/* Sources & Uses Summary */}
           <div className="p-5 sm:p-6 bg-paper-raised border border-line rounded-card shadow-xs text-xs">
             <h4 className="font-serif text-sm font-semibold text-ink pb-2.5 mb-3.5 border-b border-line flex items-center justify-between">
-              <span>Transaction Sources &amp; Uses (Entry Capitalization)</span>
+              <span>Transaction sources and uses (entry capitalization)</span>
               <span className="font-mono text-[10px] text-ink-faint font-normal">
                 Balanced Identity
               </span>
@@ -294,7 +294,7 @@ export default function LBOSimulator({
               {/* Uses */}
               <div className="p-3.5 bg-paper rounded-card border border-line/60">
                 <span className="font-mono text-[10px] uppercase tracking-wider text-ink-muted block mb-2 font-bold">
-                  Uses of Funds
+                  Uses of funds
                 </span>
                 <div className="space-y-2">
                   <div className="flex justify-between">
@@ -321,7 +321,7 @@ export default function LBOSimulator({
               {/* Sources */}
               <div className="p-3.5 bg-paper rounded-card border border-line/60">
                 <span className="font-mono text-[10px] uppercase tracking-wider text-ink-muted block mb-2 font-bold">
-                  Sources of Funds
+                  Sources of funds
                 </span>
                 <div className="space-y-2">
                   <div className="flex justify-between">
@@ -355,7 +355,7 @@ export default function LBOSimulator({
           <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
           <div>
             <span className="font-bold block font-mono text-[11px] uppercase tracking-wider">
-              Cash Flow Shortfall Alert:
+              Cash flow shortfall alert
             </span>
             <p className="mt-0.5 leading-relaxed">
               This combination of assumptions produces negative pre-interest cash flow in Year(s){" "}
@@ -369,7 +369,7 @@ export default function LBOSimulator({
       <div className="p-5 sm:p-7 bg-paper-raised border border-line rounded-card shadow-xs">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 mb-3 border-b border-line gap-1">
           <h4 className="font-serif text-base font-semibold text-ink">
-            Operating Projection &amp; Debt Amortization Schedule ($M)
+            Operating projection and debt amortization schedule ($M)
           </h4>
           <span className="text-[10px] font-mono text-ink-faint">
             ← Swipe table horizontally →

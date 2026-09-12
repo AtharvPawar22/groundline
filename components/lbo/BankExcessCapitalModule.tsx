@@ -62,12 +62,12 @@ export default function BankExcessCapitalModule({
       <div className="p-5 sm:p-7 bg-paper-raised border-l-4 border-accent-jpm border border-line rounded-card shadow-xs space-y-4">
         <div className="flex items-center gap-2 text-ink font-serif text-base sm:text-lg font-semibold">
           <Landmark className="w-5 h-5 text-accent-jpm shrink-0" />
-          <span>Why Commercial Banks Do Not Receive Standard Leveraged Buyouts</span>
+          <span>Why commercial banks do not receive standard leveraged buyouts</span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-ink leading-relaxed pt-3 border-t border-line/60">
           <div className="p-3.5 bg-paper rounded-card border border-line/60">
             <span className="font-mono text-[10px] uppercase tracking-wider text-accent-jpm font-bold block mb-1">
-              1. Deposits Are Operational Funding
+              1. Deposits are operational funding
             </span>
             <p className="text-ink-muted">
               A standard LBO layers debt onto an enterprise. A bank is already leveraged by design: customer deposits are balance sheet liabilities that fund lending operations rather than discretionary financial debt.
@@ -75,7 +75,7 @@ export default function BankExcessCapitalModule({
           </div>
           <div className="p-3.5 bg-paper rounded-card border border-line/60">
             <span className="font-mono text-[10px] uppercase tracking-wider text-accent-jpm font-bold block mb-1">
-              2. Regulatory Capital Constraints
+              2. Regulatory capital constraints
             </span>
             <p className="text-ink-muted">
               Banks operate under binding Basel III capital minimums (CET1, Tier 1, Total Capital). Cash flow cannot simply be swept to amortize buyout debt; capital must be preserved against Risk-Weighted Assets.
@@ -98,7 +98,7 @@ export default function BankExcessCapitalModule({
         <div className="lg:col-span-5 p-5 sm:p-6 bg-paper-raised border border-line rounded-card shadow-xs space-y-4">
           <div className="flex items-center justify-between pb-3 border-b border-line">
             <h3 className="font-serif text-base font-semibold text-ink">
-              Capital Distribution Levers
+              Capital distribution levers
             </h3>
             <button
               type="button"
@@ -187,7 +187,7 @@ export default function BankExcessCapitalModule({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="p-5 sm:p-6 bg-paper-raised border border-line rounded-card shadow-xs text-left">
               <span className="text-xs font-mono uppercase tracking-wider text-ink-muted block font-semibold">
-                5-Yr Capital Returned to Shareholders
+                5-year capital returned to shareholders
               </span>
               <div className="font-serif text-4xl sm:text-5xl font-normal text-ink tabular-nums mt-1">
                 ${result.summary.cumulativeCapitalReturned.toFixed(1)}B
@@ -200,7 +200,7 @@ export default function BankExcessCapitalModule({
 
             <div className="p-5 sm:p-6 bg-paper-raised border border-line rounded-card shadow-xs text-left">
               <span className="text-xs font-mono uppercase tracking-wider text-ink-muted block font-semibold">
-                Ending Tangible Book / Share
+                Ending tangible book per share
               </span>
               <div className="font-serif text-4xl sm:text-5xl font-normal text-accent-jpm tabular-nums mt-1">
                 ${result.summary.endingTbvPerShare.toFixed(2)}
@@ -217,7 +217,7 @@ export default function BankExcessCapitalModule({
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-accent" />
                 <h4 className="font-serif text-sm font-semibold text-ink">
-                  Implied 5-Year Equity Valuation at Constant Multiple
+                  Implied 5-year equity valuation at constant multiple
                 </h4>
               </div>
               <span className="font-mono text-[11px] text-ink-muted">
@@ -248,7 +248,7 @@ export default function BankExcessCapitalModule({
           <div className="p-4 sm:p-5 bg-paper-raised border border-line rounded-card shadow-xs text-xs space-y-2">
             <div className="flex items-center justify-between font-mono text-[11px]">
               <span className="font-bold text-ink uppercase tracking-wider">
-                Regulatory Excess Capital Calculation
+                Regulatory excess capital calculation
               </span>
               <span className="text-amber-800 bg-amber-100 px-2 py-0.5 rounded text-[10px] font-semibold">
                 Target Pending Official Disclosure

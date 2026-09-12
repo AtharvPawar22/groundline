@@ -32,25 +32,25 @@ export default function OverviewPage({
   // Signature teaching moment text per company
   const signatureMoments = {
     NVDA: {
-      title: "Signature Concept: Non-Operating Investment Gains & Fabless Economics",
+      title: "Non-operating investment gains and fabless economics",
       accentBorder: "border-accent-nvda",
       accentText: "text-accent-nvda",
       content:
-        "In H1 FY2027, NVIDIA reported ~$16B of mark-to-market pre-tax investment gains (from holdings including Intel common stock) in 'Other Income Net'. This elevated GAAP net income well above core chip-selling operating income. Furthermore, NVIDIA's tiny $3.4B CapEx against $130B+ revenue illustrates how fabless chip designers capture extreme gross margins (75%) by delegating heavy physical fabrication CapEx to TSMC.",
+        "In H1 FY2027, NVIDIA reported ~$16B of mark-to-market pre-tax investment gains (including Intel common stock) in 'Other Income Net'. This elevated GAAP net income above core chip-selling operating income. NVIDIA's $3.4B CapEx against over $130B in revenue illustrates how fabless chip designers capture 75% gross margins by shifting fabrication capital intensity to TSMC.",
     },
     NFLX: {
-      title: "Signature Concept: The Content Amortization Blind Spot in EBITDA",
+      title: "Content amortization and EBITDA limitations",
       accentBorder: "border-accent-nflx",
       accentText: "text-accent-nflx",
       content:
-        "EBITDA is frequently cited as a proxy for operational cash generation. For Netflix, adding back content amortization inflates EBITDA from ~$13.3B to ~$35.0B. However, streaming content depreciates in viewing value in months — Netflix must continuously spend over $17B cash every year to replace old shows. Content amortization is a real ongoing cash cost, not a non-cash historical sunk cost like machinery depreciation.",
+        "EBITDA is frequently cited as a proxy for cash generation. For Netflix, adding back content amortization lifts EBITDA from ~$13.3B to ~$35.0B. However, streaming content loses viewing value within months. Netflix spends over $17B in cash every year to replace old titles. Content amortization is an ongoing operational cash cost, not a non-cash sunk cost like machinery depreciation.",
     },
     JPM: {
-      title: "Signature Concept: Why Standard EV & EBITDA Break Down for Banks",
+      title: "Why standard EV and EBITDA break down for banks",
       accentBorder: "border-accent-jpm",
       accentText: "text-accent-jpm",
       content:
-        "For non-financial corporations, Enterprise Value = Market Cap + Debt − Cash. Applying this formula to JPMorgan Chase yields an Enterprise Value below its Market Cap ($780B EV vs. $955B Market Cap). This occurs because customer deposits are balance sheet liabilities that represent operational inventory rather than discretionary leverage. Valuation for banks relies strictly on P/E, Price/Tangible Book, ROTCE, and CET1 capital ratios.",
+        "For non-financial corporations, enterprise value equals market cap plus debt minus cash. Applying this formula to JPMorgan Chase produces an enterprise value below its market cap ($780B EV vs. $955B market cap). Customer deposits are balance sheet liabilities that fund lending operations rather than discretionary debt. Bank valuation relies on P/E, Price/Tangible Book, ROTCE, and CET1 capital ratios.",
     },
   }[ticker];
 
@@ -60,7 +60,7 @@ export default function OverviewPage({
       <section className="space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 border-b border-line pb-2">
           <h2 className="font-serif text-xl sm:text-2xl font-semibold text-ink">
-            Audited Financial Highlights
+            Audited financial highlights
           </h2>
           <span className="font-mono text-xs text-ink-muted">
             Click <span className="text-accent font-semibold">ⓘ</span> on any metric for plain-English financial mechanics
@@ -70,7 +70,7 @@ export default function OverviewPage({
         {/* Tier 1: Core Income & Profitability (Large Editorial Ledger) */}
         <div className="p-6 sm:p-8 bg-paper-raised border border-line rounded-card shadow-xs">
           <span className="font-mono text-[10px] uppercase tracking-widest text-accent font-bold block mb-4">
-            Income Statement &amp; Earning Power
+            Income statement and earning power
           </span>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <MetricCell
@@ -128,7 +128,7 @@ export default function OverviewPage({
         {/* Tier 2: Solvency, Cash Generation & Valuation Multiples */}
         <div className="p-6 sm:p-8 bg-paper-raised border border-line rounded-card shadow-xs">
           <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted font-bold block mb-4">
-            Balance Sheet Strength &amp; Valuation
+            Balance sheet and valuation
           </span>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {!isBank ? (
@@ -224,7 +224,7 @@ export default function OverviewPage({
           <Layers className="w-5 h-5 text-accent shrink-0 mt-0.5 group-hover:scale-105 transition-transform" />
           <div>
             <span className="font-serif text-sm font-semibold text-ink block group-hover:text-accent transition-colors">
-              Business Model &amp; Segments
+              Business model and segments
             </span>
             <span className="text-xs text-ink-muted leading-relaxed block mt-0.5">
               Revenue mix breakdown and Form 10-K Item 1A material risks.
@@ -239,7 +239,7 @@ export default function OverviewPage({
           <BookOpen className="w-5 h-5 text-accent shrink-0 mt-0.5 group-hover:scale-105 transition-transform" />
           <div>
             <span className="font-serif text-sm font-semibold text-ink block group-hover:text-accent transition-colors">
-              Financials &amp; Waterfall Bridge
+              Financials and waterfall bridge
             </span>
             <span className="text-xs text-ink-muted leading-relaxed block mt-0.5">
               5-year historical trajectory and earnings step-down bridge.
@@ -254,7 +254,7 @@ export default function OverviewPage({
           <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-0.5 group-hover:translate-x-1 transition-transform" />
           <div>
             <span className="font-serif text-sm font-semibold text-ink block group-hover:text-accent transition-colors">
-              {isBank ? "Bank Economics Module" : "Interactive LBO Simulator"}
+              {isBank ? "Bank economics module" : "Interactive LBO simulator"}
             </span>
             <span className="text-xs text-ink-muted leading-relaxed block mt-0.5">
               {isBank ? "ROTCE compounding & excess capital distributions." : "Real-time returns engine & value creation waterfall."}
