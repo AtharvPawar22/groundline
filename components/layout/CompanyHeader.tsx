@@ -19,9 +19,9 @@ export default function CompanyHeader({ company }: CompanyHeaderProps) {
       overlayGradient: "from-accent-nvda/80 via-ink/60 to-transparent",
     },
     NFLX: {
-      imageSrc: "/images/nflx-production.jpg",
-      imageAlt: "Netflix Production Studio & Cinematic Filming Rig",
-      imageCaption: "Global Content Production Studio & Direct-to-Consumer Streaming",
+      imageSrc: "/images/nflx-headquarters.jpg",
+      imageAlt: "Netflix Sunset Bronson Studios Hollywood Campus",
+      imageCaption: "Sunset Bronson Studios & Hollywood Production Campus",
       accentBorder: "border-accent-nflx/30",
       accentText: "text-accent-nflx",
       accentBg: "bg-accent-nflx-light",

@@ -75,18 +75,18 @@ export default function OverviewPage({
     ],
     NFLX: [
       {
-        title: "Global production studio soundstage",
-        description: "Cinematic filming infrastructure supporting multi-billion-dollar global production budgets.",
+        title: "Original content studio production",
+        description: "Physical filming infrastructure and cinema camera rigs supporting $17B+ in annual content investment.",
         imageSrc: "/images/nflx-production.jpg",
-        imageAlt: "Netflix Production Studio Soundstage",
-        imageCaption: "Studio Film & Series Production",
+        imageAlt: "Netflix Original Content Production Soundstage",
+        imageCaption: "Global Original Content Production",
       },
       {
-        title: "Direct-to-consumer streaming scale",
-        description: "Amortizing production investments across 300M+ paid memberships in 190+ countries.",
-        imageSrc: "/images/nflx-production.jpg",
-        imageAlt: "Direct-to-Consumer Streaming",
-        imageCaption: "Global Streaming Distribution",
+        title: "Streaming platform and personalization engineering",
+        description: "Product engineering and recommendation algorithms serving 300M+ paid memberships worldwide.",
+        imageSrc: "/images/nflx-office.jpg",
+        imageAlt: "Netflix Product Engineering and Global Operations",
+        imageCaption: "Streaming Platform Engineering",
       },
     ],
     JPM: [
