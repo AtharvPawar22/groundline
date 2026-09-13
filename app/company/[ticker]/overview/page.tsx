@@ -91,18 +91,18 @@ export default function OverviewPage({
     ],
     JPM: [
       {
-        title: "270 Park Avenue global headquarters",
-        description: "Manhattan world headquarters anchoring corporate and institutional investment banking.",
-        imageSrc: "/images/jpm-headquarters.jpg",
-        imageAlt: "JPMorgan Chase World Headquarters Manhattan",
-        imageCaption: "270 Park Avenue NYC",
+        title: "Global markets and institutional trading floor",
+        description: "Fixed income, equities, and currencies trading operations processing institutional liquidity.",
+        imageSrc: "/images/jpm-trading.jpg",
+        imageAlt: "JPMorgan Chase Institutional Markets Trading Desk",
+        imageCaption: "Global Markets Trading Operations",
       },
       {
-        title: "Wholesale payments & technology operations",
-        description: "Technology infrastructure supporting more than $10 trillion in daily transaction volume.",
-        imageSrc: "/images/jpm-headquarters.jpg",
-        imageAlt: "Technology Infrastructure and Global Scale",
-        imageCaption: "Global Banking Scale ($4.4T Assets)",
+        title: "Executive operations and institutional client center",
+        description: "Corporate headquarters anchoring a $4.4T balance sheet and $2.4T in customer deposits.",
+        imageSrc: "/images/jpm-lobby.jpg",
+        imageAlt: "JPMorgan Chase Executive Headquarters Lobby",
+        imageCaption: "Executive Headquarters & Client Operations",
       },
     ],
   }[ticker];
