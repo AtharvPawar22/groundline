@@ -9,9 +9,9 @@ interface CompanyHeaderProps {
 export default function CompanyHeader({ company }: CompanyHeaderProps) {
   const meta = {
     NVDA: {
-      imageSrc: "/images/nvda-datacenter.jpg",
-      imageAlt: "NVIDIA AI Supercomputer & Accelerated Computing Cluster",
-      imageCaption: "Data Center Infrastructure & Blackwell GPU Architecture",
+      imageSrc: "/images/nvda-brand.jpg",
+      imageAlt: "NVIDIA Accelerated Computing Platform",
+      imageCaption: "Global AI & Accelerated Computing Infrastructure",
       accentBorder: "border-accent-nvda/30",
       accentText: "text-accent-nvda",
       accentBg: "bg-accent-nvda-light",
