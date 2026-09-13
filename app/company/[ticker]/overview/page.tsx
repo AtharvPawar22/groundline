@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { getCompany, getSourcedValue } from "@/lib/data";
 import MetricCell from "@/components/metrics/MetricCell";
 import { Lightbulb, Layers, BookOpen, ArrowRight } from "lucide-react";
@@ -52,6 +53,58 @@ export default function OverviewPage({
       content:
         "For non-financial corporations, enterprise value equals market cap plus debt minus cash. Applying this formula to JPMorgan Chase produces an enterprise value below its market cap ($780B EV vs. $955B market cap). Customer deposits are balance sheet liabilities that fund lending operations rather than discretionary debt. Bank valuation relies on P/E, Price/Tangible Book, ROTCE, and CET1 capital ratios.",
     },
+  }[ticker];
+
+  // Operational context photography per company
+  const operationalVisuals = {
+    NVDA: [
+      {
+        title: "Blackwell GPU board assembly and inspection",
+        description: "Robotic surface-mount placement and automated optical inspection for AI accelerators.",
+        imageSrc: "/images/nvda-gpu-inspection.jpg",
+        imageAlt: "Blackwell GPU Board Assembly and Optical Inspection",
+        imageCaption: "Automated GPU Board Assembly & Optical Inspection",
+      },
+      {
+        title: "Foxconn AI server assembly line",
+        description: "Full-rack liquid-cooled GB200 NVL72 supercluster integration and automated testing.",
+        imageSrc: "/images/nvda-server-assembly.jpg",
+        imageAlt: "Foxconn Automated AI Server Assembly Facility",
+        imageCaption: "Foxconn AI Server Assembly Line & Rack Integration",
+      },
+    ],
+    NFLX: [
+      {
+        title: "Global production studio soundstage",
+        description: "Cinematic filming infrastructure supporting multi-billion-dollar global production budgets.",
+        imageSrc: "/images/nflx-production.jpg",
+        imageAlt: "Netflix Production Studio Soundstage",
+        imageCaption: "Studio Film & Series Production",
+      },
+      {
+        title: "Direct-to-consumer streaming scale",
+        description: "Amortizing production investments across 300M+ paid memberships in 190+ countries.",
+        imageSrc: "/images/nflx-production.jpg",
+        imageAlt: "Direct-to-Consumer Streaming",
+        imageCaption: "Global Streaming Distribution",
+      },
+    ],
+    JPM: [
+      {
+        title: "270 Park Avenue global headquarters",
+        description: "Manhattan world headquarters anchoring corporate and institutional investment banking.",
+        imageSrc: "/images/jpm-headquarters.jpg",
+        imageAlt: "JPMorgan Chase World Headquarters Manhattan",
+        imageCaption: "270 Park Avenue NYC",
+      },
+      {
+        title: "Wholesale payments & technology operations",
+        description: "Technology infrastructure supporting more than $10 trillion in daily transaction volume.",
+        imageSrc: "/images/jpm-headquarters.jpg",
+        imageAlt: "Technology Infrastructure and Global Scale",
+        imageCaption: "Global Banking Scale ($4.4T Assets)",
+      },
+    ],
   }[ticker];
 
   return (
@@ -200,7 +253,53 @@ export default function OverviewPage({
         </div>
       </section>
 
-      {/* 2. Signature Pedagogical Memo */}
+      {/* 2. Operational & Physical Footprint (Two Contextual Photos) */}
+      {operationalVisuals && (
+        <section className="space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 border-b border-line pb-2">
+            <h2 className="font-serif text-xl sm:text-2xl font-semibold text-ink">
+              Operational and manufacturing footprint
+            </h2>
+            <span className="font-mono text-xs text-ink-muted">
+              Physical scale and production infrastructure
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {operationalVisuals.map((visual, idx) => (
+              <div
+                key={idx}
+                className="bg-paper-raised border border-line rounded-card overflow-hidden shadow-xs hover:border-line-strong transition-colors flex flex-col justify-between group"
+              >
+                <div className="relative h-56 sm:h-64 overflow-hidden border-b border-line">
+                  <Image
+                    src={visual.imageSrc}
+                    alt={visual.imageAlt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-4 right-4 text-paper-raised text-[11px] font-mono">
+                    <span>{visual.imageCaption}</span>
+                  </div>
+                </div>
+
+                <div className="p-5 sm:p-6 space-y-2">
+                  <h3 className="font-serif text-base sm:text-lg font-semibold text-ink">
+                    {visual.title}
+                  </h3>
+                  <p className="text-xs text-ink-muted leading-relaxed font-sans">
+                    {visual.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* 3. Signature Pedagogical Memo */}
       {signatureMoments && (
         <section className={`p-6 sm:p-8 bg-paper-raised border-l-4 ${signatureMoments.accentBorder} border border-line rounded-card shadow-xs space-y-3`}>
           <div className="flex items-center gap-2">
@@ -215,7 +314,7 @@ export default function OverviewPage({
         </section>
       )}
 
-      {/* 3. Deep-Dive Navigation Shortcuts */}
+      {/* 4. Deep-Dive Navigation Shortcuts */}
       <section className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
         <Link
           href={`/company/${ticker}/business`}
