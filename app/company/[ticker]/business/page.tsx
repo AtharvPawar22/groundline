@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { getCompany, getCompanySegments, getCompanyRisks } from "@/lib/data";
 import SegmentBreakdownChart from "@/components/charts/SegmentBreakdownChart";
 import { ShieldAlert, DollarSign, PieChart } from "lucide-react";
@@ -16,11 +15,8 @@ export default function BusinessPage({
   const segmentsData = getCompanySegments(ticker);
   const risks = getCompanyRisks(ticker);
 
-  const visualBriefing = {
+  const moatBriefing = {
     NVDA: {
-      imageSrc: "/images/nvda-brand.jpg",
-      imageAlt: "NVIDIA AI Supercomputer Architecture",
-      imageCaption: "Data Center Accelerated Computing Clusters",
       accentBorder: "border-accent-nvda/30",
       accentBg: "bg-accent-nvda-light",
       accentText: "text-accent-nvda",
@@ -29,9 +25,6 @@ export default function BusinessPage({
         "By packaging silicon, NVLink networking switches, and CUDA software libraries into integrated rack systems (DGX/GB200 NVL72), NVIDIA captures hardware margins exceeding 70% while leaving high capital expenditure risks to contract foundry TSMC.",
     },
     NFLX: {
-      imageSrc: "/images/nflx-production.jpg",
-      imageAlt: "Netflix Production Studio Soundstage",
-      imageCaption: "Global Film & Television Production Engine",
       accentBorder: "border-accent-nflx/30",
       accentBg: "bg-accent-nflx-light",
       accentText: "text-accent-nflx",
@@ -40,9 +33,6 @@ export default function BusinessPage({
         "Netflix amortizes multi-billion-dollar global production budgets across 300M+ paid memberships worldwide. Unlike linear legacy television, local originals (e.g. Squid Game, Lupin) scale globally at near-zero incremental distribution cost.",
     },
     JPM: {
-      imageSrc: "/images/jpm-headquarters.jpg",
-      imageAlt: "JPMorgan Chase World Headquarters Manhattan",
-      imageCaption: "270 Park Avenue Global Headquarters NYC",
       accentBorder: "border-accent-jpm/30",
       accentBg: "bg-accent-jpm-light",
       accentText: "text-accent-jpm",
@@ -54,85 +44,63 @@ export default function BusinessPage({
 
   return (
     <div className="space-y-12">
-      {/* 1. Revenue Architecture & Moat Narrative with Editorial Visual */}
-      <section className="bg-paper-raised border border-line rounded-card overflow-hidden shadow-xs">
-        <div className="grid grid-cols-1 lg:grid-cols-12">
-          {/* Left Narrative (7 cols) */}
-          <div className="lg:col-span-7 p-6 sm:p-8 space-y-4 flex flex-col justify-between">
-            <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <DollarSign className="w-5 h-5 text-accent" />
-                <h2 className="font-serif text-xl sm:text-2xl font-semibold text-ink">
-                  Revenue architecture and business model
-                </h2>
-              </div>
-
-              <div className="text-xs sm:text-sm text-ink leading-relaxed space-y-3">
-                {ticker === "NVDA" && (
-                  <>
-                    <p>
-                      NVIDIA sells accelerated hardware compute systems, networking silicon, and enterprise software licenses. The core monetization engine is centered on full-system reference architectures (DGX, HGX, Grace Hopper, Blackwell GB200 NVL72) sold directly to hyperscale cloud service providers (CSPs), sovereign AI initiatives, enterprise OEMs, and system integrators.
-                    </p>
-                    <p className="text-ink-muted">
-                      Software monetization is accelerating via NVIDIA AI Enterprise and CUDA proprietary libraries, creating recurring high-margin software streams that lock developers into NVIDIA hardware architecture.
-                    </p>
-                  </>
-                )}
-
-                {ticker === "NFLX" && (
-                  <>
-                    <p>
-                      Netflix generates revenue almost exclusively through recurring direct-to-consumer digital subscription memberships across 190+ countries. Pricing tiers (Standard with ads, Standard, Premium) vary by geographical region, stream concurrency, and video resolution.
-                    </p>
-                    <p className="text-ink-muted">
-                      Revenue expansion is driven by paid sharing extra-member slots and a programmatic digital advertising platform that monetizes ad-tier subscribers through video commercial impressions.
-                    </p>
-                  </>
-                )}
-
-                {ticker === "JPM" && (
-                  <>
-                    <p>
-                      JPMorgan Chase operates a dual revenue engine: <strong>Net Interest Income (NII)</strong>, which is the spread between interest earned on loans/securities and interest paid on customer deposits, plus <strong>Noninterest Revenue</strong> from investment banking fees, trading markets commissions, asset management advisory fees ($4.8T AUM), and card payment interchange.
-                    </p>
-                    <p className="text-ink-muted">
-                      This diversified revenue mix dampens cyclical volatility: when interest rates drop and NII spread contracts, investment banking debt/equity underwriting and mortgage origination fee activity typically surges.
-                    </p>
-                  </>
-                )}
-              </div>
-            </div>
-
-            {/* Strategic Moat Highlight */}
-            {visualBriefing && (
-              <div className={`p-4 rounded-card border ${visualBriefing.accentBorder} ${visualBriefing.accentBg} space-y-1 mt-4`}>
-                <span className={`font-mono text-[10px] uppercase tracking-wider font-bold block ${visualBriefing.accentText}`}>
-                  Strategic moat: {visualBriefing.moatTitle}
-                </span>
-                <p className="text-xs text-ink leading-relaxed">
-                  {visualBriefing.moatDescription}
-                </p>
-              </div>
-            )}
+      {/* 1. Revenue Architecture & Moat Narrative */}
+      <section className="bg-paper-raised border border-line rounded-card overflow-hidden shadow-xs p-6 sm:p-8 space-y-6">
+        <div className="space-y-3">
+          <div className="flex items-center gap-2">
+            <DollarSign className="w-5 h-5 text-accent" />
+            <h2 className="font-serif text-xl sm:text-2xl font-semibold text-ink">
+              Revenue architecture and business model
+            </h2>
           </div>
 
-          {/* Right Visual Image (5 cols) */}
-          {visualBriefing && (
-            <div className="lg:col-span-5 relative min-h-[220px] lg:min-h-full border-t lg:border-t-0 lg:border-l border-line overflow-hidden group">
-              <Image
-                src={visualBriefing.imageSrc}
-                alt={visualBriefing.imageAlt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 text-paper-raised text-[11px] font-mono">
-                <span>{visualBriefing.imageCaption}</span>
-              </div>
-            </div>
-          )}
+          <div className="text-xs sm:text-sm text-ink leading-relaxed space-y-3 max-w-4xl">
+            {ticker === "NVDA" && (
+              <>
+                <p>
+                  NVIDIA sells accelerated hardware compute systems, networking silicon, and enterprise software licenses. The core monetization engine is centered on full-system reference architectures (DGX, HGX, Grace Hopper, Blackwell GB200 NVL72) sold directly to hyperscale cloud service providers (CSPs), sovereign AI initiatives, enterprise OEMs, and system integrators.
+                </p>
+                <p className="text-ink-muted">
+                  Software monetization is accelerating via NVIDIA AI Enterprise and CUDA proprietary libraries, creating recurring high-margin software streams that lock developers into NVIDIA hardware architecture.
+                </p>
+              </>
+            )}
+
+            {ticker === "NFLX" && (
+              <>
+                <p>
+                  Netflix generates revenue almost exclusively through recurring direct-to-consumer digital subscription memberships across 190+ countries. Pricing tiers (Standard with ads, Standard, Premium) vary by geographical region, stream concurrency, and video resolution.
+                </p>
+                <p className="text-ink-muted">
+                  Revenue expansion is driven by paid sharing extra-member slots and a programmatic digital advertising platform that monetizes ad-tier subscribers through video commercial impressions.
+                </p>
+              </>
+            )}
+
+            {ticker === "JPM" && (
+              <>
+                <p>
+                  JPMorgan Chase operates a dual revenue engine: <strong>Net Interest Income (NII)</strong>, which is the spread between interest earned on loans/securities and interest paid on customer deposits, plus <strong>Noninterest Revenue</strong> from investment banking fees, trading markets commissions, asset management advisory fees ($4.8T AUM), and card payment interchange.
+                </p>
+                <p className="text-ink-muted">
+                  This diversified revenue mix dampens cyclical volatility: when interest rates drop and NII spread contracts, investment banking debt/equity underwriting and mortgage origination fee activity typically surges.
+                </p>
+              </>
+            )}
+          </div>
         </div>
+
+        {/* Strategic Moat Highlight */}
+        {moatBriefing && (
+          <div className={`p-4 sm:p-5 rounded-card border ${moatBriefing.accentBorder} ${moatBriefing.accentBg} space-y-1`}>
+            <span className={`font-mono text-[10px] uppercase tracking-wider font-bold block ${moatBriefing.accentText}`}>
+              Strategic moat: {moatBriefing.moatTitle}
+            </span>
+            <p className="text-xs text-ink leading-relaxed max-w-4xl">
+              {moatBriefing.moatDescription}
+            </p>
+          </div>
+        )}
       </section>
 
       {/* 2. Visual Segment Breakdown */}
